@@ -28,7 +28,7 @@ namespace TestLogicLibrary
         }
 
         [DataRow(new int[] { 1, 2, 3 }, true)]
-        [DataRow(new int[] { 1,2,1}, false)]
+        [DataRow(new int[] { 1, 2, 1 }, false)]
         [DataTestMethod]
         public void TC(int[] a, bool b)
         {
