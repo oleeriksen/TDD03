@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using LogicLibrary;
+using System;
 
 namespace TestLogicLibrary
 {
@@ -35,5 +36,12 @@ namespace TestLogicLibrary
             ArrayFunctions af = new ArrayFunctions();
             Assert.IsTrue(af.IsUnique(a) == b);
         }
+
+        [TestMethod]
+        public void TestNullException() {
+            ArrayFunctions af = new ArrayFunctions();
+
+            Assert.ThrowsException<ArgumentNullException>(() => af.IsUnique(null));
+            }
     }
 }
