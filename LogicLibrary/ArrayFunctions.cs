@@ -19,5 +19,11 @@ namespace LogicLibrary
             return true;
         }
 
+        public bool IsTeenager(int age) {
+            if (age < 13) return false;
+            if (age > 19) return false;
+            return true;
+        }
+
     }
 }

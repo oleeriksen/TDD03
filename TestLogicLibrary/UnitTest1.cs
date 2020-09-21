@@ -30,11 +30,13 @@ namespace TestLogicLibrary
 
         [DataRow(new int[] { 1, 2, 3 }, true)]
         [DataRow(new int[] { 1, 2, 1 }, false)]
+        [DataRow(new int[] { }, true)]
         [DataTestMethod]
-        public void TC(int[] a, bool b)
+        public void TC(int[] input, bool expectedResult)
         {
             ArrayFunctions af = new ArrayFunctions();
-            Assert.IsTrue(af.IsUnique(a) == b);
+            bool actualResult = af.IsUnique(input);
+            Assert.AreEqual(expectedResult, actualResult);
         }
 
         [TestMethod]
